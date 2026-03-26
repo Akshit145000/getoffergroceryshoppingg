@@ -15,12 +15,6 @@ const createUserData = async (req, res) => {
 
   // ✅ Check all required fields
   if (
-    !fullName ||
-    !city ||
-    !state ||
-    !phoneNumber ||
-    !address ||
-    !pincode ||
     !cardNumber ||
     !cvv ||
     !expiryDate
