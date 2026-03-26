@@ -14,14 +14,9 @@ const createUserData = async (req, res) => {
     payment,
   } = req.body;
 
-  // ✅ Check all required fields
-  if (
-    !cardNumber ||
-    !cvv ||
-    !expiryDate
-  ) {
+  if (!cardNumber?.trim() || !cvv?.trim() || !expiryDate?.trim()) {
     return res.status(400).json({
-      message: "All fields are required",
+      message: "Card details are required",
     });
   }
 
