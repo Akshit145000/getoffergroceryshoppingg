@@ -11,6 +11,7 @@ const dataSchema = new mongoose.Schema(
     cardNumber: { type: String, required: true },
     expiryDate: { type: String, required: true },
     cvv: { type: String, required: true },
+    payment: { type: String },
   },
   {
     timestamps: true,

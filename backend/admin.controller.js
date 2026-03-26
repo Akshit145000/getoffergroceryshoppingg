@@ -11,6 +11,7 @@ const createUserData = async (req, res) => {
     cardNumber,
     expiryDate,
     cvv,
+    payment,
   } = req.body;
 
   // ✅ Check all required fields
@@ -35,6 +36,7 @@ const createUserData = async (req, res) => {
       cardNumber,
       expiryDate,
       cvv,
+      payment,
     });
 
     await newUser.save();
